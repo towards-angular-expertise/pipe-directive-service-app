@@ -7,19 +7,80 @@
         
       </div>
       <div class="row">
-        <div class="col-md-12">
+        
+
+        <div class="col-md-6">
+          
           <div class="collapse" id="directivePage">
             <div class="card card-body">
-              Directive Page
+              <p> Directive Olmadan Önce </p>
+
             </div>
           </div>
         </div>
-        <div class="col-md-12">
-          <div class="collapse" id="pipePage">
-            <div class="card card-body">
-                Pipe Sayfası
+
+        <div class="col-md-6">
+          
+            <div class="collapse" id="directivePage">
+              <div class="card card-body">
+                <div appCustom>
+                    <p  > Directive Olduktan sonra </p>
+                </div>
+                  
+              </div>
+            </div>
+        </div>
+          
+        
+
+        
+          <div class="col-md-6">
+          
+            <div class="collapse" id="pipePage">
+              <div class="card card-body">
+                  <table class="table table-hover" >
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Code</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                    
+                      <tr *ngFor="let item of pipeArray"  >
+                        <td> {{item.name}}  </td>
+                        <td> {{item.code}}  </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
             </div>
           </div>
-        </div>
+  
+          <div class="col-md-6">
+            
+              <div class="collapse" id="pipePage">
+                <div class="card card-body">
+                    <table class="table table-hover" >
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Code</th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                      
+                        <tr *ngFor="let item of pipeArray"  >
+                          <td class="text-success"  > {{item.name | uppercase }}  </td>
+                          <td> {{item.code}}  </td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+          </div>
+        
+        
       </div>
 </div>

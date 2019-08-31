@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WorkService } from 'src/services/Work.service';
 
 @Component({
   selector: 'app-Work',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private workService:WorkService) { }
+  pipeArray:any[]=[];
   ngOnInit() {
+    this.pipeArray = this.workService.getAll();
   }
 
 }
